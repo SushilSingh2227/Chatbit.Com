@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chatbit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/" data-link><i></i>Chatbit</a>
+    <nav id="nav"></nav>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <footer><span>© 2026 Chatbit</span><span class="mono">Open your address on any browser</span></footer>
+</div>
+
+<dialog id="authDlg">
+  <form method="dialog" id="authForm" autocomplete="off">
+    <h2 id="authTitle">Create your space</h2>
+    <p class="sub" id="authSub"></p>
+    <label for="aUser">Address</label>
+    <div class="field"><span class="mono pre">chatbit.com/</span><input id="aUser" name="username" maxlength="20" autocapitalize="none" spellcheck="false" required></div>
+    <label for="aPass">Password</label>
+    <input id="aPass" name="password" type="password" minlength="8" required autocomplete="current-password">
+    <p class="err" id="authErr" role="alert"></p>
+    <div class="dlg-actions">
+      <button class="btn ghost" type="button" id="authCancel">Cancel</button>
+      <button class="btn" type="submit" id="authGo">Create space</button>
+    </div>
+    <button class="linkbtn" type="button" id="authSwap"></button>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js"></script>
+</body>
+</html>

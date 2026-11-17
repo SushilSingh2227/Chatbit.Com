@@ -1,0 +1,16 @@
+{
+  "name": "chatbit",
+  "version": "2.0.0",
+  "description": "Chatbit: a personal web address for moving files between devices. Static frontend plus Netlify Functions and Netlify Blobs.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node dev-server.mjs",
+    "test": "node test/api.test.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "license": "MIT"
+}
